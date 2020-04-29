@@ -1,0 +1,5 @@
+- vérification de la conformité de la méthode (GET/HEAD/POST) et 
+de la conformité du champ message-body. (y compris content-length si POST)
+- envoi du fichier au client y compris les entêtes de réponse
+- gestion des erreurs et envoi des codes d'erreur au client.
+

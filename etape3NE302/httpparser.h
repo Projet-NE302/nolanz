@@ -12,6 +12,7 @@
 #include <stdio.h>
 
 void *httpgetRootTree();
+int methodCheck();
 
 typedef struct node {
         int level;

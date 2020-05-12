@@ -1,6 +1,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+##include <string.h>
 #include "httpparser.h"
 #include "api.h"
 
@@ -12,9 +13,9 @@ int methodCheck(){
   s=searchTree(root,"message_body");
   e=searchTree(root,"transfer_encoding");
   t=searchTree(root,"content-length");
-
-  Lnode *node, *nodes, *nodet;
-  int size = 0;
+  print("bbnb\n");
+  Lnode *node, *nodes, *nodet, *nodee;
+  int size = 0, i=0;
   node=(Lnode*)r->node;
   nodes=(Lnode*)s->node;
   nodet=(Lnode*)t->node;

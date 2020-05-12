@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         printf("Contenu de la demande %.*s\n\n",requete->len,requete->buf);
         if ((res=parseur(requete->buf,requete->len))) {
             _Token *r,*tok,*root;
-            
+
             // get the root of the tree this is no longer opaque since we know the internal type with httpparser.h
             //void *root;
             writeDirectClient(requete->clientId,REPONSE,strlen(REPONSE));
@@ -56,6 +56,7 @@ int main(int argc, char *argv[])
                 tok=tok->next;
             }
             purgeElement(&r);
+            methodCheck();
         purgeTree(root);
         } else {
             writeDirectClient(requete->clientId,ERROR,strlen(ERROR));

@@ -20,7 +20,8 @@ int methodCheck(){
   nodes=(Lnode*)s->node;
   nodet=(Lnode*)t->node;
 
-  while(e->next) e=e->next;
+  if(e) while(e->next) e=e->next;
+  printf("sss\n");
   nodee=(Lnode*)e->node;
   if(nodee->value!=NULL)if(!strcmp(nodee->value,"chunked")) check = -3; // Conformity of transfer_encoding value.
   printf("sss\n");

@@ -17,8 +17,8 @@ int methodCheck(){
   Lnode *node, *nodes, *nodet, *nodee;
   int size = 0;
   node=(Lnode*)r->node;
-  nodes=(Lnode*)s->node;
-  nodet=(Lnode*)t->node;
+  if(s) nodes=(Lnode*)s->node;
+  if(t) nodet=(Lnode*)t->node;
 
   if(e) while(e->next) e=e->next;
   printf("sss\n");

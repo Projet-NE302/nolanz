@@ -20,10 +20,11 @@ int methodCheck(){
   if(s) nodes=(Lnode*)s->node;
   if(t) nodet=(Lnode*)t->node;
 
-  if(e) while(e->next) e=e->next;
-  printf("sss\n");
-  nodee=(Lnode*)e->node;
-  if(nodee->value!=NULL)if(!strcmp(nodee->value,"chunked")) check = -3; // Conformity of transfer_encoding value.
+  if(e) {
+    while(e->next) e=e->next;
+    nodee=(Lnode*)e->node;
+    if(nodee->value!=NULL)if(!strcmp(nodee->value,"chunked")) check = -3; // Conformity of transfer_encoding value.
+  }
   printf("sss\n");
   if(!(strcmp(node->value,"GET")) && !(strcmp(node->value,"HEAD")) && !(strcmp(node->value,"POST"))) check = -1; // Conformity of method value.
   printf("sss\n");
